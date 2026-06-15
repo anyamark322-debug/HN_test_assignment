@@ -383,7 +383,7 @@ function toggleTeacher(id){
 // Master checkbox
 var masterCb=document.getElementById("master-cb");
 masterCb.addEventListener("click",function(){
-  if(selected.size===TEACHERS.length){selected.clear();}else{TEACHERS.forEach(function(t){selected.add(t.id);});}
+  if(selected.size===0){TEACHERS.forEach(function(t){selected.add(t.id);});}else{selected.clear();}
   render();
 });
 masterCb.addEventListener("keydown",function(e){if(e.key===" "||e.key==="Enter"){e.preventDefault();masterCb.click();}});
